@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Vue.js form</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
+    <link rel ="stylesheet" href ="style.css" />
+
+</head>
+<body>
+    <div id="app" >
+        <div>
+            <label for = "To-Do">To-Do</label>
+            <input type = "text" id ="goal" v-model = "enteredvalue" />
+            <button v-on:click="addGoal">Add To-Do</button>
+        </div>
+        <ul>
+           <li v-for ="goal in goals">{{goal}}</li> 
+        </ul>
+    </div>
+    <script src ="./main.js"></script>
+
+</body>
+</html>
